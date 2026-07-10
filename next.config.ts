@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  trailingSlash: true,
+  images: { unoptimized: true },
+  basePath: isGitHubActions ? "/asten-audio-site-builder" : "",
 };
 
 export default nextConfig;
