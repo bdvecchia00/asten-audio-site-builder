@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && wrangler deploy",
+    "dev:cloudflare": "npm run build && wrangler dev",
     "start": "next start",
     "lint": "eslint app"
   },
@@ -21,5 +23,6 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
     "typescript": "5.9.3"
+    ,"wrangler": "4.92.0"
   }
 }
