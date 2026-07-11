@@ -17,7 +17,7 @@ jobs:
           node-version: 22
           cache: npm
       - name: Instalar dependências
-        run: npm ci
+        run: npm install
       - name: Gerar aplicativo
         run: npm run build
       - name: Publicar Worker e site
